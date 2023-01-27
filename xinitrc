@@ -28,7 +28,10 @@ fi
 
 /usr/bin/twm &
 /usr/bin/xsetroot -solid "#336698"
+# Show the BeOS logo
+# TWM Icon Manager location set in .twmrc
+/usr/bin/feh -B gray -g 164x40+1756+0 /home/amarkov/.fvwm/icons/beos-icons/logos/start-here.png &
 /usr/bin/xclock -geometry 50x50-1+1010 &
-/usr/bin/xterm -geometry 80x50+494+51 &
-/usr/bin/xterm -geometry 80x20+494-0 &
-exec /usr/bin/xterm -geometry 80x66+0+0 -name login
+/usr/bin/xterm -geometry 120x70+40+40 &
+#/usr/bin/xterm -geometry 80x20+494-0 &
+exec /usr/bin/xterm -geometry 80x20+0+0 -name login

@@ -15,10 +15,13 @@ SqueezeTitle
 BorderWidth 2
 NoTitleHighLight
 
+# Show the BeOS Logo - done in .xinitrc
+# $ feh -B gray -g 160x40-0+0 /path/to/image &
+
 # Show the Icon Manager
 ShowIconManager
 IconDirectory "~/.config/twm/icons"
-IconManagerGeometry"=160x10-0+0" 1
+IconManagerGeometry"=160x10-0+42" 1
 # Define regions to put icons (multiple lines allowed)
 # IconRegion geomstring # define geometry)
 #   vgrav  # North or South fill direction
@@ -26,6 +29,20 @@ IconManagerGeometry"=160x10-0+0" 1
 #   gridwidth # grid dimensions to put icons in
 #   gridheight
 IconRegion "=300x300+200-0" North East 30 30
+
+# No window decorations for the following windows
+NoTitle
+{
+    "feh"
+    "TWM Icon Manager"
+}
+
+IconManagerDontShow
+{
+    "feh"
+    "xclock"
+    "login"
+}
 
 NoGrabServer
 RestartPreviousState
